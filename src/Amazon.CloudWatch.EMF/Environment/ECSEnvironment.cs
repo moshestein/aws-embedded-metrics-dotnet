@@ -159,8 +159,8 @@ namespace Amazon.CloudWatch.EMF.Environment
             if (_ecsMetadata?.Image == null) return;
 
             var imageName = _ecsMetadata.Image;
-            var splitImageNames = imageName.Split("\\/");
-            _ecsMetadata.FormattedImageName = splitImageNames[^1];
+            var splitImageNames = imageName.Split(["\\/"], StringSplitOptions.None);
+            _ecsMetadata.FormattedImageName = splitImageNames[splitImageNames.Length - 1];
         }
     }
 

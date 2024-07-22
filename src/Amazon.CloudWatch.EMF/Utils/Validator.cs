@@ -71,7 +71,7 @@ namespace Amazon.CloudWatch.EMF.Utils
                 throw new InvalidMetricException($"Metric name {name} cannot be longer than {Constants.MaxMetricNameLength} characters");
             }
 
-            if (!Double.IsFinite(value))
+            if (Double.IsInfinity(value))
             {
                 throw new InvalidMetricException($"Metric value {value} must be a finite number");
             }

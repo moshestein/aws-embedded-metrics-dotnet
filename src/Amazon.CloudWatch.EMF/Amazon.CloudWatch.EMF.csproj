@@ -1,28 +1,30 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-    <PropertyGroup>
-        <PackageId>Amazon.CloudWatch.EMF</PackageId>
-        <VersionPrefix>2.2.0</VersionPrefix>
-        <Authors>Amazon Web Services</Authors>
-        <Description>Amazon CloudWatch Embedded Metric Format Client Library</Description>
-        <Language>en-US</Language>
-        <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-        <ProjectUrl>https://github.com/awslabs/aws-embedded-metrics-dotnet</ProjectUrl>
-        <RepositoryUrl>https://github.com/awslabs/aws-embedded-metrics-dotnet</RepositoryUrl>
-        <PackageTags>AWS Amazon cloud CloudWatch Metrics EMF</PackageTags>
-        <PackageIconUrl>http://media.amazonwebservices.com/aws_singlebox_01.png</PackageIconUrl>
-        <IncludeSymbols>true</IncludeSymbols>
-    </PropertyGroup>
+  <PropertyGroup>
+    <PackageId>Amazon.CloudWatch.EMF</PackageId>
+    <VersionPrefix>2.2.0</VersionPrefix>
+    <Authors>Amazon Web Services</Authors>
+    <Description>Amazon CloudWatch Embedded Metric Format Client Library</Description>
+    <Language>en-US</Language>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <ProjectUrl>https://github.com/awslabs/aws-embedded-metrics-dotnet</ProjectUrl>
+    <RepositoryUrl>https://github.com/awslabs/aws-embedded-metrics-dotnet</RepositoryUrl>
+    <PackageTags>AWS Amazon cloud CloudWatch Metrics EMF</PackageTags>
+    <PackageIconUrl>http://media.amazonwebservices.com/aws_singlebox_01.png</PackageIconUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+  </PropertyGroup>
 
-    <PropertyGroup>
-        <TargetFramework>netcoreapp3.1</TargetFramework>
-        <CodeAnalysisRuleSet>Amazon.CloudWatch.EMF.ruleset</CodeAnalysisRuleSet>
-    </PropertyGroup>
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp3.1;net4.8</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
+    <CodeAnalysisRuleSet>Amazon.CloudWatch.EMF.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
 
-    <ItemGroup>
-        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.8" />
-        <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-        <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" PrivateAssets="All" />
-    </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.8" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" PrivateAssets="All" />
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
+  </ItemGroup>
 
 </Project>

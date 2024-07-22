@@ -76,7 +76,7 @@ namespace Amazon.CloudWatch.EMF.Environment
         private string GetSampledTrace()
         {
             string traceId = EnvUtils.GetEnv(TRACE_ID);
-            if (traceId != null && traceId.Contains("Sampled=1", StringComparison.OrdinalIgnoreCase))
+            if (traceId != null && traceId.ToLower().Contains("sampled=1"))
             {
                 return traceId;
             }
